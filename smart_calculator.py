@@ -48,8 +48,11 @@ def user1():
     ch = int(input("Which values do you want to enter : \n 1. integer \n 2. float\n"))
     while(ch):
         if ch == 1:
-            a = int(input("Enter the the number : "))
-            break
+            try:
+                a = int(input("Enter the 1st number : "))
+                break
+            except ValueError:
+                print("Please enter integer value !!\n")
         elif ch==2:
             a = float(input("Enter the the number : "))
             break
